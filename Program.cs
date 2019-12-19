@@ -7,7 +7,7 @@ namespace ConnectionTester
     {
         static void Main(string[] args)
         {
-            ServicePointManager.DefaultConnectionLimit = 1;
+            ServicePointManager.DefaultConnectionLimit = 10;
 
             var tester = new ConnectionTester();
             tester.MakeClientCalls().GetAwaiter().GetResult();
